@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import TicketLink from "./components/TicketLink";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
           </li>
           <li>Save and see your changes instantly.</li>
         </ol>
-
+          <TicketLink>Get Tickets</TicketLink>
         <div className={styles.ctas}>
           <a
             className={styles.primary}
