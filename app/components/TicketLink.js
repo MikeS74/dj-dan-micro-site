@@ -1,10 +1,11 @@
 'use client'
 
 import styled from 'styled-components';
+import { colors } from '../styles/colors';
 
 const TicketLink = styled.div`
   display: inline-flex;
-  color: hsl(15 50% 80%);
+  color: ${colors.lightGrapefruit};
   font-weight: 600;
   cursor: pointer;
   font-size: 16px;

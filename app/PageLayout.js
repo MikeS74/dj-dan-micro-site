@@ -13,12 +13,13 @@ align-items: center;
 `;
 
 const PageLayout = () => {
-const isSmallScreen = useMediaQuery('(max-width: 768px)');
-console.log(isSmallScreen);
+const showMobileLayout = useMediaQuery('(max-width: 620px)');
     return (
 <PageLayoutStyled>
-    <HeaderDesktop />
-    <TicketLink />
+    {showMobileLayout ? null :  <HeaderDesktop />}
+    <TicketLink>
+        Get Tickets
+    </TicketLink>
 </PageLayoutStyled>
     )
 }
