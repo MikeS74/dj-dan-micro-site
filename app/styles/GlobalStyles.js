@@ -11,18 +11,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: hsl(225 20% 20%);
   background: linear-gradient(
-		-45deg,
-		hsl(15 20% 20%),
-		hsl(295 20% 20%),
-		hsl(251 20% 20%),
-		hsl(225 20% 20%),
-		hsl(203 20% 20%)
+		-75deg,
+		hsl(15 18% 18%),
+		hsl(295 18% 18%),
+		hsl(251 18% 18%),
+		hsl(225 18% 18%),
+		hsl(203 18% 18%)
 	);
 	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+	animation: gradient 25s ease infinite;
   /* solid background fallback */
   background-color: hsl(225 20% 20%);
-	height: 100vh;
+  height: 100vh;
   max-width: 100vw;
   overflow-x: hidden;
   }
