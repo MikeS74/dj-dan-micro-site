@@ -9,7 +9,6 @@ body {
   font-family: var(--font-inter);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: hsl(225 20% 20%);
   background: linear-gradient(
 		-75deg,
 		hsl(15 18% 18%),
@@ -21,7 +20,7 @@ body {
 	background-size: 400% 400%;
 	animation: gradient 25s ease infinite;
   /* solid background fallback */
-  background-color: hsl(225 20% 20%);
+  background-color: hsl(225 18% 18%);
   height: 100vh;
   max-width: 100vw;
   overflow-x: hidden;
