@@ -1,12 +1,16 @@
 'use client'
 
 import { createGlobalStyle } from 'styled-components';
+import { colors } from './colors';
 
 const GlobalStyles = createGlobalStyle`
 
 body {
   /* font-family: Arial, Helvetica, sans-serif; */
   font-family: var(--font-inter);
+  font-weight: 500;
+  font-size: 16px;
+  color: ${colors.offWhite};
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(
