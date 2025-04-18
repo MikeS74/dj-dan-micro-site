@@ -16,7 +16,7 @@ flex-direction: column;
 const HeaderLayout = styled.div`
 margin-top: 32px;
 margin-right: auto;
-margin-bottom: ${({ $showMobileLayout })=> $showMobileLayout ? '32px' : `${mainStackGap}px`};
+margin-bottom: ${({ $showMobileLayout })=> $showMobileLayout ? '40px' : `${mainStackGap}px`};
 margin-left: auto;
 `;
 
@@ -28,14 +28,17 @@ width: 100%;
 max-width: 560px;
 margin: 0 auto;
 padding: 0 16px;
+overflow: hidden;
 `;
 
 const ResponsiveHeader = styled.div`
-margin-top: -10px;
     svg {
-        width: 100%;
-        height: 100px;
+        width: 100vw;
+        height: auto;
     }
+    /* @media screen and (max-width: 480px) {
+        margin-top: -20px;
+    } */
 `;
 
 const PageLayout = () => {
@@ -50,8 +53,8 @@ const showMobileLayout = useMediaQuery('(max-width: 620px)');
      ) :  <HeaderDesktop />}
     </HeaderLayout>
     <MainContent>
-    <TourSchedule />
-    <div style={{ width: '100%', height: 80, backgroundColor: '#222222' }} />
+    <TourSchedule $showMobileLayout={showMobileLayout} />
+    {/* <div style={{ width: '100%', height: 80, backgroundColor: '#222222' }} /> */}
     </MainContent>
 </PageLayoutStyled>
     )
