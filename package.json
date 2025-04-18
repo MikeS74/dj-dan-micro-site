@@ -2,7 +2,10 @@
   "name": "dj-dan-micro-site",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mikes74.github.io/dj-dan-micro-site",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -17,6 +20,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "eslint": "^9",
-    "eslint-config-next": "15.3.0"
+    "eslint-config-next": "15.3.0",
+    "gh-pages": "^6.3.0"
   }
 }
