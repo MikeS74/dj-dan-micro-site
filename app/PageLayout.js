@@ -2,19 +2,22 @@
 
 import styled from 'styled-components';
 import HeaderDesktop from './components/HeaderDesktop';
+import HeaderMobile from './components/HeaderMobile';
 import TourSchedule from './components/TourSchedule';
 import useMediaQuery from './helpers/useMediaQuery';
 
- const mainStackGap = 64;
+const mainStackGap = 48;
 
 const PageLayoutStyled = styled.div`
 display: flex;
 flex-direction: column;
-padding: 16px;
 `;
 
 const HeaderLayout = styled.div`
-margin: 16px auto ${mainStackGap}px auto;
+margin-top: 32px;
+margin-right: auto;
+margin-bottom: ${({ $showMobileLayout })=> $showMobileLayout ? '32px' : `${mainStackGap}px`};
+margin-left: auto;
 `;
 
 const MainContent = styled.div`
@@ -22,20 +25,33 @@ display: flex;
 flex-direction: column;
 gap: ${mainStackGap}px;
 width: 100%;
-margin: 0 auto;
 max-width: 560px;
+margin: 0 auto;
+padding: 0 16px;
+`;
+
+const ResponsiveHeader = styled.div`
+margin-top: -10px;
+    svg {
+        width: 100%;
+        height: 100px;
+    }
 `;
 
 const PageLayout = () => {
 const showMobileLayout = useMediaQuery('(max-width: 620px)');
     return (
 <PageLayoutStyled>
-    <HeaderLayout>
-    {showMobileLayout ? null :  <HeaderDesktop />}
+    <HeaderLayout $showMobileLayout={showMobileLayout}>
+    {showMobileLayout ? (
+        <ResponsiveHeader>
+            <HeaderMobile />
+        </ResponsiveHeader>
+     ) :  <HeaderDesktop />}
     </HeaderLayout>
     <MainContent>
     <TourSchedule />
-    {/* <div style={{ width: '100%', height: 80, backgroundColor: '#222222' }} /> */}
+    <div style={{ width: '100%', height: 80, backgroundColor: '#222222' }} />
     </MainContent>
 </PageLayoutStyled>
     )
