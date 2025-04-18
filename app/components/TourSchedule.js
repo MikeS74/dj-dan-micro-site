@@ -119,6 +119,19 @@ justify-content: space-between;
 gap: 8px;
 `;
 
+const ComingSoon = styled.div`
+display: flex;
+align-items: center;
+width: 100%;
+font-size: 14px;
+color: ${colors.dimWhite};
+font-weight: 600;
+background-color: ${colors.charcoal};
+border: 1px solid grey;
+padding: 16px;
+border-radius: 18px;
+`;
+
 const TourDate = ({ data, $showMobileLayout }) => {
 const monthDayArr = splitAtFirstNumber(data?.date);
 const hasVenue = Boolean(data?.venue);
@@ -197,6 +210,9 @@ return (
             <TourDate data={td} $showMobileLayout={$showMobileLayout} key={`${td?.date}${td?.city}`} />
         );
       })}
+      <ComingSoon>
+        More dates TBA
+      </ComingSoon>
 </TourScheduleLayout>
 )
 };
