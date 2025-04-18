@@ -211,7 +211,7 @@ return (
         );
       })}
       <ComingSoon>
-        More dates TBA
+        More dates TBA...
       </ComingSoon>
 </TourScheduleLayout>
 )
