@@ -1,0 +1,22 @@
+[
+    {
+        "dayOfWeek": "Friday",
+        "date": "April 18",
+        "isDateRange": "",
+        "year": "2025",
+        "city": "Salinas, CA",
+        "venue": "201 Main",
+        "eventTitle": "BPM +",
+        "ticketUrl": ""
+    },
+    {
+        "dayOfWeek": "Saturday",
+        "date": "June 28",
+        "isDateRange": "false",
+        "year": "2025",
+        "city": "New Orleans, LA",
+        "venue": "Metropolitan",
+        "eventTitle": "Back to the Palace 2",
+        "ticketUrl": "https://www.seetickets.us/event/Back-to-the-Palace-2-NEW-ORLEANS/640630"
+    }
+]
